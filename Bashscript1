@@ -1,0 +1,32 @@
+#!/bin/bash
+x=1
+while x=1;do
+read -p 'If you want to retrieve the list of files smaller than 1M,
+         please provide your path : ' address
+        
+find $address -type f > file1
+if [ $? -ne 0 ];then 
+   x=1
+   echo " The address is not correct "
+   echo " Please Enter the valid address or path with * "
+else
+	 rm file1
+     find $address -type f -size -1000k >> file1
+Filename=file1
+if [ ! -s "${Filename}" ];then
+     echo "There are not files in this address the $Filename is empty"
+else
+        read -p 'There are files in this address if you want to print
+           the list of files, please Enter a character like y : ' catfile
+        if [ $catfile == "y" ]; then
+             cat file1
+	     exit 0
+        else
+             echo "you did not want to print the list of files."
+	     echo "********************Bye*********************"
+	     exit 0
+        fi
+fi
+fi   
+done
+
