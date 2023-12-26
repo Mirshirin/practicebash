@@ -26,7 +26,7 @@
 # Bashscript2
 # ********************************************************************************
 # in this script, I put a path of files in a variable
-# and I show you the list of files sort by modified time
+# and I show you the list of files sort by modification time
 # ********************************************************************************
 # Bashscript3
 # ********************************************************************************
