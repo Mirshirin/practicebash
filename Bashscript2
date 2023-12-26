@@ -1,0 +1,13 @@
+#!/bin/bash
+pathchoose=tmp/Pbashs/practice
+read -p 'do you want to list your path sort by modification time?
+                               please type "y": ' check
+        if [ $check == "y" ]; then
+             cd
+             cd $pathchoose
+             ls -lt --time=atime
+             exit 0
+        else
+             echo "you did not want to sort by modification time ."
+             echo "***********************************************"
+        fi	     

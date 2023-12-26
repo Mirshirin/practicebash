@@ -1,0 +1,14 @@
+#!/bin/bash
+pathchoose=tmp/Pbashs/practice/Bashscripts/Bashscript1
+read -p 'do you want to gice you the size of file?
+                               please type "y": ' check
+        if [ $check == "y" ]; then
+             cd
+             
+             du -b $pathchoose>bb
+	     grep -vFf $pathchoose bb
+	     exit 0
+        else
+             echo "you did not want to sort by modification time ."
+             echo "***********************************************"
+        fi	     
